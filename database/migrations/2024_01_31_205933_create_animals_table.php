@@ -13,11 +13,13 @@ class CreateAnimalsTable extends Migration
     {
         Schema::create('animals', function (Blueprint $table) {
             $table->id();
-            $table->string('type');
+            $table->tinyInteger('type');
             $table->string('name');
             $table->string('breed');
-            $table->string('size');
-            $table->string('age');
+            $table->tinyInteger('gender');
+            $table->string('adoption');
+            $table->tinyInteger('size');
+            $table->tinyInteger('age');
             $table->string('img');
             $table->timestamps();
             $table->softDeletes();
